@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Text Editor</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script src="coding.js"defer>   </script>
+   
+</head>
+<body>
+  <div class="frame">
+    <h1>Simple Text Editor</h1>
+
+    <div class="navi">
+      
+      <button id="boldBtn" onclick="toggleBold()">B</button>
+      <button id="italicBtn" onclick="toggleItalic()">I</button>
+      <button id="underlineBtn" onclick="toggleUnderline()">U</button>
+
+      
+      <input type="color" id="fontColor" onchange="changeColor()" title="Font Color" />
+
+      
+      <button id="leftBtn" onclick="align('left')">
+        <img src="photo/align-left.png" />
+      </button>
+      <button id="centerBtn" onclick="align('center')">
+        <img src="photo/format.png" />
+      </button>
+      <button id="rightBtn" onclick="align('right')">
+        <img src="photo/align-right.png" />
+      </button>
+      <button id="justifyBtn" onclick="align('justify')">
+        <img src="photo/justification.png" />
+      </button>
+
+     
+      <button onclick="undo()">Undo</button>
+      <button onclick="redo()">Redo</button>
+    </div>
+
+   
+    <div id="editor" contenteditable="true" class="textarea"></div>
+
+   
+  </div>
+</body>
+</html>
